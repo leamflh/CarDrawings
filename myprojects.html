@@ -1,0 +1,172 @@
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="myprojects.css"> <!-- link lal  css -->
+<link href="https://fonts.googleapis.com/css?family=Wallpoet&display=swap" rel="stylesheet"> <!-- font l nav -->
+ <link rel="shortcut icon" type="image/x-icon" href="index picture/minilogo.jpg"/> <!-- link lal logo l zghir bl title -->
+ <link href="https://fonts.googleapis.com/css?family=Black+Ops+One&display=swap" rel="stylesheet">
+ 	<link href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC&display=swap" rel="stylesheet">  <!-- font l parags -->
+		 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!-- lal end -->
+		 
+		 
+		 
+		 <script>
+		 function op1(){
+		var e = document.getElementById("size");
+	var result = e.options[e.selectedIndex].value;
+	var resultt=document.getElementById("money");
+	resultt.innerHTML="$"+result+".00";
+	return result;
+	}
+		 
+		function ap1(){
+		var f = document.getElementById("number");
+	var result1 = f.options[f.selectedIndex].value;
+	return result1;
+	}
+	
+	function sum(){
+	   var cost=document.getElementById("money1");
+	   var sum= Number(op1()) + Number(ap1());
+	   cost.innerHTML= "$"+Number(sum)+".00" ;
+	}
+		 
+		 
+		 
+		 </script>
+		 
+		 
+		 
+		 
+ </head>
+ <title>My projects </title>
+ <body>
+ 
+ 
+ 
+ 
+<!-- navigation bar -->
+<header>
+
+  <img class="logoo" src="index picture/logo.png" >
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Home»</a></li>
+      <li><a href="myprojects.html"> My Projects»</a></li>
+	  
+     
+     <li> <a href="contact us.html">Contact us»</a>
+     
+     
+      </div>
+	  </li>
+      <li><a href="about us.html">About us»</a></li>  
+	 
+	  
+    
+	   <li>   <div class="flexbox">
+  <div class="search">
+    
+    <div class="s">
+      <input type="text" placeholder="       Search . . ." required>
+    </div> </li>
+    </ul>
+  </div>
+</div>
+  </nav>
+  
+   
+ 
+</header>
+<span class="firsttitle">➥Custom Your Car Drawings </span>
+<span class="secondtitle"><ul>Transform your car's photo into work of art! Hand painted with devotion & attention to detail.<li>Shipping is FREE all around Leabanon </li><li>International shipping is available at cost. Contact us for details.<li> Not seeing the option your need ? Please contact us.</li></ul></span>
+<div class="im">
+<img class="im1" src="my projects/1.jpg" width="400" height="400">
+<img class="im2" src="my projects/2.jpg" width="400" height="400">
+<img class="im3" src="my projects/3.jpg" width="400" height="400">
+<img class="im4" src="my projects/4.jpg" width="400" height="400">
+<img class="im5" src="my projects/5.jpg" width="400" height="400">
+<img class="im6" src="my projects/6.jpg" width="400" height="400">
+</div>
+
+
+<label class="size">Size:<br>
+<select name="size" id="size">
+<option selected>Choose an option. </option>
+<option onclick="op1()" value="100">5x7</option>
+<option onclick="op1()" value="200">16x20</option>
+<option onclick="op1()" value="300">20x20<option>
+<option onclick="op1()" value="400">18x24</option>
+<option onclick="op1()" value="500">24x36</option>
+</select></label>
+<div class="money" id="money"></div>
+
+
+<label class="number">Number of cars in the same painting :<br>
+<select name="size" id="number">
+<option selected>Choose an option. </option>
+<option >1</option>
+<option onclick="ap1()" value="50">2($50.00)</option>
+<option onclick="ap1()" value="150">4($150.00)<option>
+<option onclick="ap1()" value="200">5($200.00)</option>
+
+</select></label>
+<div id="money"></div>
+
+
+<span class="browse">Please upload a photo of your car </span>
+<form action="/action_page.php">
+<input type="file" name="pic" accept="image/*" class="browse1">
+</form>
+<span class="add1">Additional car photo 2</span>
+
+<input class="browse2" type="file" name="pic" accept="image/*">
+<span class="add2">Additional car photo 3</span>
+<input class="browse3" type="file" name="pic" accept="image/*" >
+
+<span class="add3">Additional car photo 4</span>
+<input class="browse4" type="file" name="pic" accept="image/*">
+
+
+<button class="totalprice" onclick="sum()">Total Price </button>
+<a href="card.html"><button class="purchase"  >Purchase </button></a>
+<div class="money1" id="money1"></div>
+
+
+
+
+
+
+<!--final-->
+
+<div class="experience5">
+<table>
+<tr class="lasttable1">
+<th class="lasttable1">
+<p class="end1">     @ 2019 Elie AUTODESIGN - All Rights Reserved <hr> 
+ <div class="stars" >Recieved 8/10 based on 259 reviews 
+
+
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star"></span></div> 
+
+
+
+</p>
+</th>
+<th class="lasttable1" rowspan="1">
+<p class="end2"> | Also Follow us on : </p>
+<a href="https://www.instagram.com/elieautodesign/" class="fa fa-instagram"></a>
+<a href="https://www.facebook.com/Elie-auto-design-133968980598828/" class="fa fa-facebook"></a>
+
+</p> 
+</th>
+
+</tr>
+
+</table>
+</div>

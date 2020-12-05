@@ -1,0 +1,581 @@
+/* heda klshi khaso bl body */
+
+
+body,html { 
+	 /* create space around the body*/                                                                                                                                                                            
+  background-image :url('about us picture/13.png');
+
+width:100%;
+ margin:0;
+
+}
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ /* Klshi khaso bl navigation bar */
+ 
+ 
+
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+
+
+
+
+/* navigation styles start here */
+
+header {
+  background: #212121; /* lon background l nav */
+  text-align: center; /* jebt l nav lal nos, abel ma ysir nav */
+  position: relative; /* hata law 3mlt scroll, bt dal l nav mbyne */
+  z-index: 999; /* mazel hatyta fix , ta tdal on top of everything , na2et r2m kbir ehtiyat */
+  width: 100%; /* toul l navigation bar aa kel l sheshe */
+}
+
+
+
+nav {
+  position: absolute;
+  text-align: left;
+  top: 100%;
+  left: 0;
+  background: #212121; /* background l kalimet */
+  width: 100%; /*ykun l background tabae l kalimet aa kel l sheshe msh bas aa background l kalimet */
+  transform: scale(1, 0);
+  transform-origin: top;
+  transition: transform 400ms ease-in-out;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none; /* ta shil l circle men l liste */
+}
+
+nav li {
+  margin-bottom: 1em; /* space ben l kalimet */
+  margin-left: 1em; /* space aan l marge */
+}
+
+nav a {
+  color: #a6a6a6; /* lon l kalimet */
+  text-decoration: none; /* shil l underline */
+  font-size: 1.03rem; /* size l kalimet */
+  text-transform: capitalize; /* ykuno majuscule l kalimet */
+  opacity: 0;
+  transition: opacity 150ms ease-in-out;
+  font-family: 'Wallpoet', cursive;
+  
+}
+
+nav a:hover {
+  color: #D21818; /* bas ekbos aal kelme , b ghayir loawna */
+  text-decoration: none;
+}
+
+
+  header {
+    display: grid;
+    grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
+  }
+  
+  .logo {
+    grid-column: 2 / 3;
+	
+  }
+  
+  
+	  
+ 
+  
+  nav {
+	  
+    // all: unset; /* this causes issues with Edge, since it's unsupported */
+    
+    /* the following lines are not from my video, but add Edge support */
+    position: relative;
+    text-align: left;
+    transition: none;
+    transform: scale(1,1);
+    background: none;
+   left: 80px; /* zehet kel l kalimet lal left */
+   top: 18px;;
+    /* end Edge support stuff */
+    
+    grid-column: 3 / 4;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  
+  nav ul {
+    display: flex;
+  }
+  
+  nav li {
+	  
+    margin-left: 4em; /* maghatet l kalimet lal left */
+    margin-bottom: 0; /* l kalimet ykuno bl nos fa l bottom 0 */
+  }
+  
+  nav a {
+    opacity: 1;
+    position: relative;
+  }
+  
+  nav a::before {
+    content: '';
+    display: block;
+    height: 5px;
+    background: #D21818;
+    position: absolute;
+    top: -.75em;
+    left: 0;
+    right: 0;
+    transform: scale(0, 1);
+    transition: transform ease-in-out 200ms;
+  }
+  
+  nav a:hover::before {
+    transform: scale(1,1);
+  }
+
+
+
+.flexbox { /* kela aa baada */
+  background: #212121;
+  width: 10%;
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 30px;
+   
+  
+}
+
+.search {
+  margin: 20px;
+  top: 10px;
+}
+
+
+
+
+
+.search > .s {
+  display: inline-block;
+  position: relative;
+ right: -150px;
+}
+
+.search > .s:after { /* klshi khaso bl zi7 tabae l search icon */
+  content: ""; /*mashi, bas lama kabro b sir mtl zi& */
+  background: #a6a6a6; /*lawn l zi7 */
+  width: 4px; /* aarda */
+  height: 17px; /* toul l zi7 tabae l search */
+  position: absolute;
+  top: 20px;
+  right: -4px;
+  transform: rotate(135deg);
+  box-shadow: 1px 0 #0091c2;
+   
+}
+
+.search > .s > input { /* l kelme SEARCH li b aleb l box */
+  color: #a6a6a6;
+  font-size: 16px;
+  background: transparent;
+  width: 25px;
+  height: 25px;
+  padding: 10px;
+  border: solid 3px #a6a6a6;
+  outline: none;
+  border-radius: 35px;
+  box-shadow: 0 1px #0091c2;
+  transition: width 0.5s;
+}
+
+.search > .s > input::placeholder { /* li b aleb l case */
+  color:#a6a6a6 ;
+  opacity: 0.85;
+}
+
+.search > .s > input::-ms-placeholder {
+  color: #efefef;
+}
+
+.search > .s > input::-ms-input-placeholder {
+  color: #efefef;
+}
+
+.search > .s > input:focus,
+.search > .s > input:valid {
+  width: 250px; /* ede byetwal l box */
+}
+
+
+.firsttitle{
+		font-family: 'Black Ops One', cursive;
+		color: #a6a6a6;
+		font-size: 50px;
+		position: absolute;
+		top: 100px;
+}
+
+.im1{
+	position: absolute;
+	top: 300px;
+	left: 50px;
+	transition: transform .2s;
+}
+
+.im2{
+	position: absolute;
+	top: 300px;
+	left: 35%;
+	transition: transform .2s;
+}
+.im3{
+	position: absolute;
+	top: 300px;
+	left: 66%;
+	transition: transform .2s;
+}
+.im4{
+	position: absolute;
+	top: 720px;
+	left: 50px;
+	transition: transform .2s;
+}
+.im5{
+	position: absolute;
+	top: 720px;
+	left: 35%;
+	transition: transform .2s;
+}
+.im6{
+	position: absolute;
+	top: 720px;
+	left: 66%;
+	transition: transform .2s;
+}
+
+.secondtitle{
+	font-family: 'Alegreya Sans SC', sans-serif;
+	font-size: 20px;
+	color: #a6a6a6;
+	top: 170px;
+	position: absolute;
+	
+}
+
+.im1:hover {
+  transform: scale(1.04);
+}
+.im2:hover {
+  transform: scale(1.04);
+}
+.im3:hover {
+  transform: scale(1.04);
+}
+.im4:hover {
+  transform: scale(1.04);
+}
+.im5:hover {
+  transform: scale(1.04);
+}
+.im6:hover {
+  transform: scale(1.04);
+  
+}
+
+.size{
+	position: absolute;
+	top:1200px;
+	color:#a6a6a6;
+	font-family: 'Alegreya Sans SC', sans-serif;
+	font-size: 40px;
+	left:30px;
+	
+	
+}
+
+.money{
+	color:#a6a6a6;
+	position: absolute;
+	top:1200px;
+	left: 300px;
+	font-size: 40px;
+	
+}
+.money1{
+	color:#a6a6a6;
+	position: absolute;
+	top:1720px;
+	left: 550px;
+	font-size: 40px;
+	
+}
+
+.totalprice{
+	position: absolute;
+	top:1700px;
+	left: 300px;
+	
+}  
+.purchase{
+	position: absolute;
+	top:1800px;
+	left: 300px;
+	
+}
+select{
+	width: 400px;
+	height:30px;
+}
+.number{
+	position: absolute;
+	top:1200px;
+	color:#a6a6a6;
+	font-family: 'Alegreya Sans SC', sans-serif;
+	font-size: 40px;
+	left:50%;
+	
+}
+
+.browse{
+     position: absolute;
+	top:1350px;
+	color:#a6a6a6;
+	font-family: 'Alegreya Sans SC', sans-serif;
+	font-size: 40px;
+	left:30px;
+}
+.browse1{
+     position: absolute;
+	top:1430px;
+	width: 100px;
+	height: 30px;
+	left:30px;
+}
+
+
+.add1{
+	position: absolute;
+	top:1350px;
+	color:#a6a6a6;
+	font-family: 'Alegreya Sans SC', sans-serif;
+	font-size: 40px;
+	left:50%;
+	
+}
+
+.browse2{
+     position: absolute;
+	top:1430px;
+	width: 100px;
+	height: 30px;
+	left:50%;
+}
+
+.add2{
+	position: absolute;
+	top:1500px;
+	color:#a6a6a6;
+	font-family: 'Alegreya Sans SC', sans-serif;
+	font-size: 40px;
+	left:30px;
+}
+
+.browse3{
+     position: absolute;
+	top:1580px;
+	width: 100px;
+	height: 30px;
+	left:30px;
+}
+
+
+.add3{
+	position: absolute;
+	top:1500px;
+	color:#a6a6a6;
+	font-family: 'Alegreya Sans SC', sans-serif;
+	font-size: 40px;
+	left:50%;
+	
+}
+
+.browse4{
+     position: absolute;
+	top:1580px;
+	width: 100px;
+	height: 30px;
+	left:50%;
+}
+
+.first{
+	position: relative;
+	top:1250px;
+	width: 10%;
+	right:28%;
+}
+
+
+
+
+
+
+
+/* ekhir shi */
+
+
+
+
+.experience5 {
+	position : absolute;
+	top: 1900px;
+	font-size: 15px;
+	color:  #a6a6a6;
+	left: 50px;
+	font-family: 'Alegreya Sans SC', sans-serif;
+	width:90%;
+}
+
+
+
+
+
+
+/* logo insta and fb */
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+   border-radius: 50%;
+}
+
+.fa:hover {
+    opacity: 0.9;
+	color: white;
+	text-decoration: none;
+}
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+
+
+
+
+ /* reviews */
+	.checked {
+  color: orange;
+}
+.stars {
+	color:#a6a6a6;
+	font-size: 12px;
+
+}
+
+.lasttable1 {
+	padding: 1px ;
+	 border: 0px solid white;
+	 width: 100%;
+	 height: 40px;
+}
+
+
+.end1 {
+	color:#a6a6a6;
+	font-size :12px;
+}
+
+
+
+.end2 {
+	
+text-align: right;
+color:#a6a6a6;
+font-size: 12px;
+}
+
+hr {
+	background-color:#a6a6a6; 
+}
+
+     button {
+      display: inline-block;
+      background-color: #0080ff;
+      border-radius: 10px;
+      border: 4px double #cccccc;
+      color: #eeeeee;
+      text-align: center;
+      font-size: 28px;
+      padding: 20px;
+      width: 200px;
+      transition: all 0.5s;
+      cursor: pointer;
+      margin: 5px;
+      }
+      button span {
+      cursor: pointer;
+      display: inline-block;
+      position: relative;
+      transition: 0.5s;
+      }
+      button span:after {
+      content: '\00bb';
+      position: absolute;
+      opacity: 0;
+      top: 0;
+      right: -20px;
+      transition: 0.5s;
+      }
+      button:hover {
+      background-color: #a9a9a9;
+      }
+      button:hover span {
+      padding-right: 25px;
+      }
+      button:hover span:after {
+      opacity: 1;
+      right: 0;
+      }
+

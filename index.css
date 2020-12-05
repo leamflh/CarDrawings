@@ -1,0 +1,867 @@
+/* heda klshi khaso bl body */
+
+
+
+
+
+
+
+
+body { 
+	margin: 0; /* create space around the body*/                                                                                                                                                                            
+  
+
+}
+
+
+
+
+
+
+
+
+
+ /* Klshi khaso bl navigation bar */
+ 
+ 
+
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+
+
+
+
+/* navigation styles start here */
+
+header {
+  background: #212121; /* lon background l nav */
+  text-align: center; /* jebt l nav lal nos, abel ma ysir nav */
+  position: relative; /* hata law 3mlt scroll, bt dal l nav mbyne */
+  z-index: 999; /* mazel hatyta fix , ta tdal on top of everything , na2et r2m kbir ehtiyat */
+  width: 100%; /* toul l navigation bar aa kel l sheshe */
+}
+
+
+
+nav {
+  position: absolute;
+  text-align: left;
+  top: 100%;
+  left: 0;
+  background: #212121; /* background l kalimet */
+  width: 100%; /*ykun l background tabae l kalimet aa kel l sheshe msh bas aa background l kalimet */
+  transform: scale(1, 0);
+  transform-origin: top;
+  transition: transform 400ms ease-in-out;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none; /* ta shil l circle men l liste */
+}
+
+nav li {
+  margin-bottom: 1em; /* space ben l kalimet */
+  margin-left: 1em; /* space aan l marge */
+}
+
+nav a {
+  color: #a6a6a6; /* lon l kalimet */
+  text-decoration: none; /* shil l underline */
+  font-size: 1.03rem; /* size l kalimet */
+  text-transform: capitalize; /* ykuno majuscule l kalimet */
+  opacity: 0;
+  transition: opacity 150ms ease-in-out;
+  font-family: 'Wallpoet', cursive;
+  
+}
+
+nav a:hover {
+  color: #D21818; /* bas ekbos aal kelme , b ghayir loawna */
+  text-decoration: none;
+}
+
+
+  header {
+    display: grid;
+    grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
+  }
+  
+  .logo {
+      grid-column: 2 / 3;
+	
+  }
+  
+  nav {
+	  
+     all: unset; /* this causes issues with Edge, since it's unsupported */
+    
+    /* the following lines are not from my video, but add Edge support */
+    position: relative;
+    text-align: left;
+    transition: none;
+    transform: scale(1,1);
+    background: none;
+   left: 80px; /* zehet kel l kalimet lal left */
+   top: 18px;;
+    /* end Edge support stuff */
+    
+    grid-column: 3 / 4;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  
+  nav ul {
+    display: flex;
+  }
+  
+  nav li {
+	  
+    margin-left: 4em; /* maghatet l kalimet lal left */
+    margin-bottom: 0; /* l kalimet ykuno bl nos fa l bottom 0 */
+  }
+  
+  nav a {
+    opacity: 1;
+    position: relative;
+  }
+  
+  nav a::before {
+    content: '';
+    display: block;
+    height: 5px;
+    background: #D21818;
+    position: absolute;
+    top: -.75em;
+    left: 0;
+    right: 0;
+    transform: scale(0, 1);
+    transition: transform ease-in-out 200ms;
+  }
+  
+  nav a:hover::before {
+    transform: scale(1,1);
+  }
+
+
+
+
+
+
+
+
+/* l search bel nav */
+
+.flexbox { /* kela aa baada */
+  background: #212121;
+  width: 10%;
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 30px;
+   
+  
+}
+
+.search {
+  margin: 20px;
+  top: 10px;
+}
+
+
+
+
+
+.search > .s {
+  display: inline-block;
+  position: relative;
+ right: -150px;
+}
+
+.search > .s:after { /* klshi khaso bl zi7 tabae l search icon */
+  content: ""; /*mashi, bas lama kabro b sir mtl zi& */
+  background: #a6a6a6; /*lawn l zi7 */
+  width: 4px; /* aarda */
+  height: 17px; /* toul l zi7 tabae l search */
+  position: absolute;
+  top: 20px;
+  right: -4px;
+  transform: rotate(135deg);
+  box-shadow: 1px 0 #0091c2;
+   
+}
+
+.search > .s > input { /* l kelme SEARCH li b aleb l box */
+  color: #a6a6a6;
+  font-size: 16px;
+  background: transparent;
+  width: 25px;
+  height: 25px;
+  padding: 10px;
+  border: solid 3px #a6a6a6;
+  outline: none;
+  border-radius: 35px;
+  box-shadow: 0 1px #0091c2;
+  transition: width 0.5s;
+}
+
+.search > .s > input::placeholder { /* li b aleb l case */
+  color:#a6a6a6 ;
+  opacity: 0.85;
+}
+
+.search > .s > input::-ms-placeholder {
+  color: #efefef;
+}
+
+.search > .s > input::-ms-input-placeholder {
+  color: #efefef;
+}
+
+.search > .s > input:focus,
+.search > .s > input:valid {
+  width: 250px; /* ede byetwal l box */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* parallax */
+
+
+
+body, html {
+  height: 100%; /* keber l sura aa kel l body, ana bde yeha tbayin kela bl awal */
+}  
+
+
+.parallax {
+  /* The image used */
+  background-image: url('index picture/wall3.jpg');
+
+  /* Full height */
+  height: 100%; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed; /* l sura bt dal law 3mlt scroll, yaane bt dal sebte */
+  background-position: center; /* bde l sura tkun bl center */
+  background-repeat: no-repeat; /* b hotole l soura kaza mara */
+  background-size: cover; /* bt aabe kl l sheshe */
+ 
+}
+ 
+ .firstcase  {
+	height:1800px;
+	font-size:38px;
+	background-image: url('index picture/wall2.jpg');
+}
+
+
+
+/* blockquote */
+
+
+.blockquote-wrapper {
+   display: flex;
+   height: 80vh;
+   padding: 40px 20px;
+   opacity: 70%;
+   color: #a6a6a6;
+}
+
+/* Virgule */
+.blockquote {
+    position: relative;
+  font-family: 'Almendra SC', serif;
+    font-weight: 400;
+    color: #ffffff;
+    padding: 30px 0;
+    width: 100%;
+    max-width: 500px; /*toul l zihen */
+    z-index: 1;
+    margin: 80px auto;
+    align-self: center;
+    border-top: solid 1px;
+    border-bottom: solid 1px;
+	font-size: 50px;
+}
+
+/* Blockquote header */
+.blockquote h1 {
+    position: relative;
+    color: #FFFFFF;
+    font-size: 30px;
+    font-weight: 200;
+    line-height: 1;
+    margin: 0;
+}
+
+/* Blockquote right double quotes */
+.blockquote:after {
+    position: absolute;
+    content: "”";
+    color: rgba(255, 255, 255, 1);
+    font-size: 10rem;
+    line-height: 150px;
+    right: 30px;
+}
+
+
+
+
+
+
+
+
+
+/* scroll */
+
+
+.SCROLL {
+  position: relative;
+  width: 80%;
+  height: 80%;
+  padding: 450px;
+  left: 55%;
+  top:-550px;
+  
+}
+
+.chevron {
+  position: absolute;
+  width: 80px;
+  height: 8px;
+  opacity: 0;
+  transform: scale3d(0.5, 0.5, 0.5);
+  animation: move 3s ease-out infinite;
+}
+
+.chevron:first-child {
+  animation: move 3s ease-out 1s infinite;
+}
+
+.chevron:nth-child(2) {
+  animation: move 3s ease-out 2s infinite;
+}
+
+.chevron:before,
+.chevron:after {
+  content: ' ';
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 51%;
+  background: #fff;
+}
+
+.chevron:before {
+  left: 0;
+  transform: skew(0deg, 30deg);
+}
+
+.chevron:after {
+  right: 0;
+  width: 50%;
+  transform: skew(0deg, -30deg);
+}
+
+@keyframes move {
+  25% {
+    opacity: 1;
+
+  }
+  33% {
+    opacity: 1;
+    transform: translateY(30px);
+  }
+  67% {
+    opacity: 1;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(55px) scale3d(0.5, 0.5, 0.5);
+  }
+}
+
+.text {
+  display: block;
+  margin-top: 75px;
+  margin-left: -30px;
+  font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
+  font-size: 20px;
+  color: #fff;
+  text-transform: uppercase;
+  white-space: nowrap;
+  opacity: .25;
+  animation: pulse 2s linear alternate infinite;
+}
+
+@keyframes pulse {
+  to {
+    opacity: 1;
+  }
+}
+
+
+
+
+/* awal case */
+
+
+
+  
+  
+  
+table {
+	width:100%;
+}
+th , td {
+	padding: 30px;
+	
+}
+
+
+
+ .card1 {
+  box-shadow: 0px 4px 8px 7px rgba(0,153,255,1);
+  transition: 0.3s;
+  width: 32.92rem;
+  left: 5%;
+  background-color: #fff;
+}
+.card1:hover {
+  box-shadow: 0 8px 16px 14px rgba(0, 153, 255,1);
+}
+.card1-title{
+margin: 0 0 2rem 0;
+text-align: center;
+text-decoration: overline;
+text-transform: uppercase;
+font-size: 30px;
+letter-spacing: .20rem;
+}
+
+.card1-text{
+	 text-transform: uppercase;
+    font-size: 17px;
+    font-weight: 300;
+    margin: 0 0 .25rem 0;
+    padding: 0 0 .75rem 0;
+    letter-spacing: .20rem;
+	color: #a6a6a6;
+	text-align: center;
+}
+
+
+.info1 {
+	color: #a6a6a6;
+	text-align: center;
+	margin: 1rem ;
+	letter-spacing: .20rem;
+	font-size: 15px;
+}
+
+.p1 {
+	color: #a6a6a6 ;
+    
+
+
+    
+
+    font-family: 'Libre Barcode 39 Text', cursive;
+
+  
+
+
+
+
+	background-color: rgba(0, 153, 255,0.1);
+	text-align: center;
+
+	font-size: 60px;
+}
+
+ .card2 {
+  box-shadow: 0px 4px 8px 7px rgba(0,153,255,1);
+  transition: 0.3s;
+  width: 32.92rem;
+  left: 5%;
+  background-color: #fff;
+  
+}
+.card2:hover {
+  box-shadow: 0 8px 16px 14px rgba(0, 153, 255,1);
+}
+.card2-title{
+margin: 0 0 2rem 0;
+text-align: center;
+text-decoration: overline;
+text-transform: uppercase;
+font-size: 30px;
+letter-spacing: .20rem;
+}
+
+.card2-text{
+	 text-transform: uppercase;
+    font-size: 17px;
+    font-weight: 300;
+    margin: 0 0 .25rem 0;
+    padding: 0 0 .75rem 0;
+    letter-spacing: .20rem;
+	color: #a6a6a6;
+	text-align: center;
+}
+
+
+.info2 {
+	color: #a6a6a6;
+	text-align: center;
+	margin: 1rem ;
+	letter-spacing: .20rem;
+	font-size: 15px;
+}
+
+ .card3 {
+  box-shadow: 0px 4px 8px 7px rgba(0,153,255,1);
+  transition: 0.3s;
+  width: 32.96rem;
+  left: 5%;
+  background-color: #fff;
+  
+}
+.card3:hover {
+  box-shadow: 0 8px 16px 14px rgba(0, 153, 255,1);
+}
+.card3-title{
+margin: 0 0 2rem 0;
+text-align: center;
+text-decoration: overline;
+text-transform: uppercase;
+font-size: 30px;
+letter-spacing: .20rem;
+}
+
+.card3-text{
+	 text-transform: uppercase;
+    font-size: 17px;
+    font-weight: 300;
+    margin: 0 0 .25rem 0;
+    padding: 0 0 .75rem 0;
+    letter-spacing: .20rem;
+	color: #a6a6a6;
+	text-align: center;
+}
+
+
+.info3 {
+	color: #a6a6a6;
+	text-align: center;
+	margin: 1rem ;
+	letter-spacing: .20rem;
+	font-size: 15px;
+}
+
+ .card4 {
+  box-shadow: 0px 4px 8px 7px rgba(0,153,255,1);
+  transition: 0.3s;
+  width: 32.93rem;
+  left: 5%;
+  background-color: #fff;
+  
+}
+.card4:hover {
+  box-shadow: 0 8px 16px 14px rgba(0, 153, 255,1);
+}
+.card4-title{
+margin: 0 0 2rem 0;
+text-align: center;
+text-decoration: overline;
+text-transform: uppercase;
+font-size: 30px;
+letter-spacing: .20rem;
+}
+
+.card4-text{
+	 text-transform: uppercase;
+    font-size: 17px;
+    font-weight: 300;
+    margin: 0 0 .25rem 0;
+    padding: 0 0 .75rem 0;
+    letter-spacing: .20rem;
+	color: #a6a6a6;
+	text-align: center;
+}
+
+
+.info4 {
+	color: #a6a6a6;
+	text-align: center;
+	margin: 1rem ;
+	letter-spacing: .20rem;
+	font-size: 15px;
+}
+
+
+
+
+
+
+/* tene parallax*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.parallax1 {
+  /* The image used */
+  background-image: url('index picture/wall3.jpg');
+
+  /* Full height */
+  height: 30%; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed; /* l sura bt dal law 3mlt scroll, yaane bt dal sebte */
+  background-position: center; /* bde l sura tkun bl center */
+  background-repeat: no-repeat; /* b hotole l soura kaza mara */
+  background-size: cover; /* bt aabe kl l sheshe */
+ 
+}
+marquee{
+	color: #8B0000           ;
+ text-align: center;
+ margin: 20px; /*ta edrt nazela */
+ font-size: 60px;
+ font-weight: 300;
+width: 1300px;
+ font-family: 'Black Ops One', cursive;
+ 
+    background-color: rgba(0, 153, 255,0);
+ 
+}
+
+
+
+
+
+
+/* tene case */
+
+
+.secondcase  {
+background-image: url('index picture/wall2.jpg');
+	height: 650px;
+	font-size:38px;
+}
+  
+
+
+.title1{
+ color:#a6a6a6;
+ text-align: center;
+ text-transform: uppercase;
+ letter-spacing: .20rem;
+ font-weight: 200;
+ text-decoration: overline underline;
+}
+
+
+
+
+
+	
+
+
+.card5 {
+  box-shadow: 0px 4px 8px 7px rgba(0,153,255,1);
+  transition: 0.3s;
+  width: 37.5rem;
+  right: 30%;
+  background-color: #fff;
+  
+}
+.card5:hover {
+  box-shadow: 0 8px 16px 14px rgba(0, 153, 255,1);
+}
+.card5-title{
+margin: 0 0 2rem 0;
+text-align: center;
+text-decoration: overline;
+text-transform: uppercase;
+font-size: 30px;
+letter-spacing: .20rem;
+}
+
+.card5-text{
+	 text-transform: uppercase;
+    font-size: 17px;
+    font-weight: 300;
+    margin: 0 0 .25rem 0;
+    padding: 0 0 .75rem 0;
+    letter-spacing: .20rem;
+	color: #a6a6a6;
+	text-align: center;
+}
+
+
+.info5 {
+	color: #a6a6a6;
+	text-align: center;
+	margin: 1rem ;
+	letter-spacing: .20rem;
+	font-size: 15px;
+}
+
+.bmwvid {
+	font-family: 'Black Ops One', cursive;
+	font-size: 90px;
+	color:#a6a6a6;
+	position: center;
+}
+
+video {
+	box-shadow: 0px 4px 8px 7px rgba(0,153,255,0.4);
+  transition: 0.3s;
+}
+
+video:hover {
+  box-shadow: 0 8px 16px 14px rgba(0, 153, 255,0.8);
+}
+
+.moreinfos {
+	color:#a6a6a6;
+	font-size: 15px;
+}
+
+
+
+
+/* ekhir parallax */
+	
+	.parallax2 {
+  /* The image used */
+  background-image: url('index picture/wall3.jpg');
+
+  /* Full height */
+  height: 20%; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed; /* l sura bt dal law 3mlt scroll, yaane bt dal sebte */
+  background-position: center; /* bde l sura tkun bl center */
+  background-repeat: no-repeat; /* b hotole l soura kaza mara */
+  background-size: cover; /* bt aabe kl l sheshe */
+ 
+}
+
+
+
+
+
+
+/* telit case lal end */
+
+.thirdcase  {
+	
+	height: 150px;
+	background-image: url('index picture/wall2.jpg');
+
+}
+
+.end1 {
+	color:#a6a6a6;
+	font-size :12px;
+}
+
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+   border-radius: 50%;
+}
+
+.fa:hover {
+    opacity: 0.9;
+	color: white;
+	text-decoration: none;
+}
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.end2 {
+	
+text-align: right;
+color:#a6a6a6;
+font-size: 12px;
+}
+
+hr {
+	background-color:#a6a6a6; 
+}
+	.checked {
+  color: orange;
+}
+.stars {
+	color:#a6a6a6;
+	font-size: 12px;
+
+}
+
+
+	
+.lasttable1 {
+	padding: 1px ;
+	 border: 0px solid white;
+}
+
+

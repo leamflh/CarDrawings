@@ -1,0 +1,554 @@
+/* heda klshi khaso bl body */
+
+
+body,html { 
+	margin: 0; /* create space around the body*/                                                                                                                                                                            
+  background-image :url('about us picture/13.png');
+ 
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ /* Klshi khaso bl navigation bar */
+ 
+ 
+
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+
+
+
+
+/* navigation styles start here */
+
+header {
+  background: #212121; /* lon background l nav */
+  text-align: center; /* jebt l nav lal nos, abel ma ysir nav */
+  position: relative; /* hata law 3mlt scroll, bt dal l nav mbyne */
+  z-index: 999; /* mazel hatyta fix , ta tdal on top of everything , na2et r2m kbir ehtiyat */
+  width: 100%; /* toul l navigation bar aa kel l sheshe */
+}
+
+
+
+nav {
+  position: absolute;
+  text-align: left;
+  top: 100%;
+  left: 0;
+  background: #212121; /* background l kalimet */
+  width: 100%; /*ykun l background tabae l kalimet aa kel l sheshe msh bas aa background l kalimet */
+  transform: scale(1, 0);
+  transform-origin: top;
+  transition: transform 400ms ease-in-out;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none; /* ta shil l circle men l liste */
+}
+
+nav li {
+  margin-bottom: 1em; /* space ben l kalimet */
+  margin-left: 1em; /* space aan l marge */
+}
+
+nav a {
+  color: #a6a6a6; /* lon l kalimet */
+  text-decoration: none; /* shil l underline */
+  font-size: 1.03rem; /* size l kalimet */
+  text-transform: capitalize; /* ykuno majuscule l kalimet */
+  opacity: 0;
+  transition: opacity 150ms ease-in-out;
+  font-family: 'Wallpoet', cursive;
+  
+}
+
+nav a:hover {
+  color: #D21818; /* bas ekbos aal kelme , b ghayir loawna */
+  text-decoration: none;
+}
+
+
+  header {
+    display: grid;
+    grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
+  }
+  
+  .logo {
+    grid-column: 2 / 3;
+  }
+  
+  nav {
+	  
+    // all: unset; /* this causes issues with Edge, since it's unsupported */
+    
+    /* the following lines are not from my video, but add Edge support */
+    position: relative;
+    text-align: left;
+    transition: none;
+    transform: scale(1,1);
+    background: none;
+   left: 80px; /* zehet kel l kalimet lal left */
+   top: 18px;;
+    /* end Edge support stuff */
+    
+    grid-column: 3 / 4;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  
+  nav ul {
+    display: flex;
+  }
+  
+  nav li {
+	  
+    margin-left: 4em; /* maghatet l kalimet lal left */
+    margin-bottom: 0; /* l kalimet ykuno bl nos fa l bottom 0 */
+  }
+  
+  nav a {
+    opacity: 1;
+    position: relative;
+  }
+  
+  nav a::before {
+    content: '';
+    display: block;
+    height: 5px;
+    background: #D21818;
+    position: absolute;
+    top: -.75em;
+    left: 0;
+    right: 0;
+    transform: scale(0, 1);
+    transition: transform ease-in-out 200ms;
+  }
+  
+  nav a:hover::before {
+    transform: scale(1,1);
+  }
+
+
+
+.flexbox { /* kela aa baada */
+  background: #212121;
+  width: 10%;
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 30px;
+   
+  
+}
+
+.search {
+  margin: 20px;
+  top: 10px;
+}
+
+
+
+
+
+.search > .s {
+  display: inline-block;
+  position: relative;
+ right: -150px;
+}
+
+.search > .s:after { /* klshi khaso bl zi7 tabae l search icon */
+  content: ""; /*mashi, bas lama kabro b sir mtl zi& */
+  background: #a6a6a6; /*lawn l zi7 */
+  width: 4px; /* aarda */
+  height: 17px; /* toul l zi7 tabae l search */
+  position: absolute;
+  top: 20px;
+  right: -4px;
+  transform: rotate(135deg);
+  box-shadow: 1px 0 #0091c2;
+   
+}
+
+.search > .s > input { /* l kelme SEARCH li b aleb l box */
+  color: #a6a6a6;
+  font-size: 16px;
+  background: transparent;
+  width: 25px;
+  height: 25px;
+  padding: 10px;
+  border: solid 3px #a6a6a6;
+  outline: none;
+  border-radius: 35px;
+  box-shadow: 0 1px #0091c2;
+  transition: width 0.5s;
+}
+
+.search > .s > input::placeholder { /* li b aleb l case */
+  color:#a6a6a6 ;
+  opacity: 0.85;
+}
+
+.search > .s > input::-ms-placeholder {
+  color: #efefef;
+}
+
+.search > .s > input::-ms-input-placeholder {
+  color: #efefef;
+}
+
+.search > .s > input:focus,
+.search > .s > input:valid {
+  width: 250px; /* ede byetwal l box */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* l about  */
+
+.about {
+	font-size: 50px;
+	position: absolute ;
+	left: 80px;
+	text-transform : uppercase;
+	color:  #a6a6a6;
+	font-family: 'Black Ops One', cursive;
+}
+
+.firstline {
+	border: 3px solid  #a6a6a6;;
+ position: absolute;
+ top: 170px;
+    width: 600px;
+	left: 75px;
+	
+	
+}
+
+.quest{
+	position: absolute;
+	top: 200px;
+	left: 150px;
+	color:  #a6a6a6;
+	text-transform : uppercase;
+	font-family: 'Fredericka the Great', cursive;
+	font-size: 15px;
+	
+}
+
+.secondline {
+	position: absolute;
+	border: 3px solid  #a6a6a6;;
+	width:600px;
+	top: 230px;
+	left: -75px;
+}
+
+.colorofquest {
+	color: #003366 ;
+	font-family: 'Fredericka the Great', cursive;
+}
+
+.eliephoto {
+	position : absolute;
+	height: 400px;
+	left: 670px;
+	border:6px solid  #a6a6a6;
+	width: 600px;
+	top: 110px;
+}
+
+
+
+
+
+
+
+/* experience */
+
+
+.experience {
+	position : relative;
+	top: 450px;
+	font-size: 40px;
+	color:  #a6a6a6;
+	left: 50px;
+	font-family: 'Black Ops One', cursive;
+	text-transform: uppercase;
+}
+
+.danger {
+  background-color: rgba(0, 89, 179,0.4);
+  border-left: 7px solid black;
+  top: 650px;
+  position: absolute;
+  left: 90px;
+  text-transform: uppercase;
+  width: 50%;
+  height: 60px;
+  box-shadow: 0px 2px 4px 3px rgba(0,153,255,1);
+  font-family: 'Fredericka the Great', cursive;
+  color: #a6a6a6;
+}
+.danger:hover {
+  box-shadow: 0 4px 8px 7px rgba(0, 153, 255,1);
+}
+
+.danger2 {
+  background-color: rgba(0, 89, 179,0.4);
+  border-left: 7px solid black;
+  top: 720px;
+  position: absolute;
+  left: 90px;
+  text-transform: uppercase;
+  width: 50%;
+  height: 60px;
+  box-shadow: 0px 2px 4px 3px rgba(0,153,255,1);
+  font-family: 'Fredericka the Great', cursive;
+  color: #a6a6a6;
+}
+.danger2:hover {
+  box-shadow: 0 4px 8px 7px rgba(0, 153, 255,1);
+}
+
+
+
+/* featured */
+
+
+.experience2 {
+	position : relative;
+	top: 370px;
+	font-size: 40px;
+	color:  #a6a6a6;
+	left: 1000px;
+	font-family: 'Black Ops One', cursive;
+	text-transform: uppercase;
+	
+}
+
+
+
+.experience3 {
+	position : relative;
+	top: 370px;
+	font-size: 25px;
+	left: 1000px;
+	font-family: 'Black Ops One', cursive;
+	text-transform: uppercase;
+	color: #a6a6a6;
+}
+
+.links{
+	position : relative;
+	top: 370px;
+	font-size: 20px;
+	
+	left: 1000px;
+}
+
+.worldstars {
+	color:#003366 ;
+}
+.worldstars:hover {
+	color: #a6a6a6;
+
+}
+
+
+
+
+
+
+
+
+
+/* personal */
+
+
+
+
+
+
+
+
+.personaltext {
+	position : relative;
+	top: 450px;
+	font-size: 30px;
+	color:  #a6a6a6;
+	left: 30px;
+	font-family: 'Alegreya Sans SC', sans-serif;
+	
+	
+}
+
+.eliepic2 {
+	position: absolute;
+	top: -20px;
+	left: 600px;
+	border: 5px solid #a6a6a6;
+}
+
+
+.experience4 {
+	position : relative;
+	top: 450px;
+	font-size: 40px;
+	color:  #a6a6a6;
+	left: 50px;
+	font-family:  'Black Ops One', cursive;
+}
+
+
+
+.personaltext1 {
+	position : relative;
+	top: 500px;
+	font-size: 30px;
+	color:  #a6a6a6;
+	left: 600px;
+	font-family: 'Alegreya Sans SC', sans-serif;
+	
+	
+}
+
+.eliepic3 {
+	position: absolute;
+	top: 1350px;
+	left: 30px;
+	border: 5px solid #a6a6a6;
+}
+
+
+/* the end */
+
+
+
+
+.experience5 {
+	position : relative;
+	top: 600px;
+	font-size: 15px;
+	color:  #a6a6a6;
+	left: 50px;
+	font-family: 'Alegreya Sans SC', sans-serif;
+}
+
+
+
+
+
+
+/* logo insta and fb */
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+   border-radius: 50%;
+}
+
+.fa:hover {
+    opacity: 0.9;
+	color: white;
+	text-decoration: none;
+}
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+
+
+
+
+ /* reviews */
+	.checked {
+  color: orange;
+}
+.stars {
+	color:#a6a6a6;
+	font-size: 12px;
+
+}
+
+.lasttable1 {
+	padding: 1px ;
+	 border: 0px solid white;
+	 width: 83%;
+	 height: 40px;
+}
+
+
+.end1 {
+	color:#a6a6a6;
+	font-size :12px;
+}
+
+
+
+.end2 {
+	
+text-align: right;
+color:#a6a6a6;
+font-size: 12px;
+}
+
+hr {
+	background-color:#a6a6a6; 
+}
